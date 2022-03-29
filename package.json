@@ -1,0 +1,40 @@
+{
+  "name": "foreman",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Package building tools",
+  "repository": "fellwork/foreman",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "pnpm -r build",
+    "lint": "pnpm -r lint",
+    "preinstall": "npx only-allow pnpm",
+    "prepack": "pnpm -r prepack",
+    "release": "pnpm test && standard-version && git push --follow-tags && pnpm publish",
+    "test": "pnpm -r test"
+  },
+  "author": "Shane McGuirt <shane@fellwork.com>",
+  "devDependencies": {
+    "@fellwork/eslint-config": "latest",
+    "@fellwork/prettier-config": "latest",
+    "@rushstack/eslint-config": "latest",
+    "@tsconfig/node16": "latest",
+    "@types/node": "latest",
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "prettier": "latest",
+    "pretty-quick": "latest",
+    "standard-version": "latest",
+    "typescript": "latest",
+    "unbuild": "latest",
+    "vitest": "latest"
+  },
+  "packageManager": "pnpm@6.32.3",
+  "engines": {
+    "node": ">=12.20.0",
+    "pnpm": ">=6.32.3"
+  },
+  "prettier": "@fellwork/prettier-config"
+}

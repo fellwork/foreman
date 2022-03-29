@@ -1,0 +1,76 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "esnext"
+    ],
+    "sourceMap": true,
+    "rootDir": ".",
+
+    /* Strict Type-Checking Options */
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Additional Checks */
+    "forceConsistentCasingInFileNames": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Module Resolution Options */
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Dts Options */
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "skipLibCheck": true
+  },
+  "references": [
+    {
+      "path": "packages/build/tsconfig.json"
+    },
+    {
+      "path": "packages/cli/tsconfig.json"
+    },
+    {
+      "path": "packages/config/tsconfig.json"
+    },
+    {
+      "path": "packages/esbuild-plugin/tsconfig.json"
+    },
+    {
+      "path": "packages/externals/tsconfig.json"
+    },
+    {
+      "path": "packages/foreman/tsconfig.json"
+    },
+    {
+      "path": "packages/loader/tsconfig.json"
+    },
+    {
+      "path": "packages/log/tsconfig.json"
+    },
+    {
+      "path": "packages/rollup/tsconfig.json"
+    },
+    {
+      "path": "packages/tsc/tsconfig.json"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+{
+  "name": "@fellwork/foreman-config",
+  "version": "0.0.0",
+  "repository": "fellwork/foreman",
+  "license": "MIT",
+  "author": "Shane McGuirt <shane@fellwork.com>",
+  "description": "",
+  "exports": {
+    ".": {
+      "require": "./lib/index.js",
+      "import": "./lib/index.mjs"
+    },
+    "./*": {
+      "require": "./lib/*.js",
+      "import": "./lib/*.mjs"
+    }
+  },
+  "main": "lib/index.js",
+  "module": "lib/index.mjs",
+  "types": "lib/index.d.ts",
+  "files": [
+    "/bin",
+    "/lib"
+  ],
+  "scripts": {},
+  "dependencies": {
+    "@pnpm/types": "^8.0.0"
+  },
+  "packageManager": "pnpm@6.32.3",
+  "engines": {
+    "node": ">=12.20.0",
+    "pnpm": ">=6.32.3"
+  },
+  "type": "module"
+}
