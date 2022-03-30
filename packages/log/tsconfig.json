@@ -3,7 +3,7 @@
   "compilerOptions": {
     "composite": true,
     "emitDeclarationOnly": false,
-    "lib":[
+    "lib": [
       "esnext"
     ]
   },
@@ -12,5 +12,10 @@
   ],
   "exclude": [
     "node_modules"
+  ],
+  "references": [
+    {
+      "path": "../externals"
+    }
   ]
 }

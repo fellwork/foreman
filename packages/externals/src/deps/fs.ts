@@ -1,4 +1,4 @@
-import {
+export {
   copy as fsCopy,
   copyFile as fsCopyFile,
   ensureDir as fsEnsureDir,
@@ -7,5 +7,3 @@ import {
   readJSON as fsReadJSON,
   writeJSON as fsWriteJSON
 } from 'fs-extra'
-
-export { fsCopyFile, fsMkdirp, fsPathExists, fsReadJSON, fsWriteJSON, fsCopy, fsEnsureDir }

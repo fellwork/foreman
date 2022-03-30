@@ -97,5 +97,11 @@
     "typescript.preferences.importModuleSpecifierEnding": "index",
     "typescript.tsdk": "node_modules/typescript/lib",
     "typescript.updateImportsOnFileMove.enabled": "never",
-    "plantuml.includepaths": ["docs/diagrams/style","docs/diagrams/src"],
+    "plantuml.includepaths": [
+      "docs/diagrams/style",
+      "docs/diagrams/src"
+    ],
+    "conventionalCommits.scopes": [
+      "externals"
+    ],
 }

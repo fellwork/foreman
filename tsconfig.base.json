@@ -1,0 +1,23 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    /* Basic Options */
+    "module": "esnext",
+    "rootDir": ".",
+
+    /* Module Resolution Options */
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+
+    /* Dts Options */
+    "declaration": true,
+    "paths": {
+      "@foreman/externals": ["packages/externals/src/index.ts"],
+      "@foreman/externals/*": ["packages/externals/src/*"]
+    }
+  }
+
+}

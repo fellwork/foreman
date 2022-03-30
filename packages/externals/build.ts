@@ -1,6 +1,6 @@
 import { build } from 'esbuild'
 import { exit } from 'node:process'
-import { pathResolve } from './src/path'
+import { pathResolve } from './src/deps/path'
 
 async function main() {
   await startBuild({

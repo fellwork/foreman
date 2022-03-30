@@ -10,6 +10,7 @@
     "build": "pnpm -r build",
     "lint": "pnpm -r lint",
     "preinstall": "npx only-allow pnpm",
+    "postinstall": "update-ts-references --configName tsconfig.packages.json --verbose true",
     "prepack": "pnpm -r prepack",
     "release": "pnpm test && standard-version && git push --follow-tags && pnpm publish",
     "test": "pnpm -r test"
@@ -26,9 +27,11 @@
     "eslint-plugin-prettier": "latest",
     "prettier": "latest",
     "pretty-quick": "latest",
+    "rimraf": "^3.0.2",
     "standard-version": "latest",
-    "typescript": "latest",
+    "typescript": "^4.6.3",
     "unbuild": "latest",
+    "update-ts-references": "^2.4.1",
     "vitest": "latest"
   },
   "packageManager": "pnpm@6.32.3",

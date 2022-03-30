@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.fsEnsureDir = exports.fsCopy = exports.fsWriteJSON = exports.fsReadJSON = exports.fsPathExists = exports.fsMkdirp = exports.fsCopyFile = void 0;
+const fs_extra_1 = require("fs-extra");
+Object.defineProperty(exports, "fsCopy", { enumerable: true, get: function () { return fs_extra_1.copy; } });
+Object.defineProperty(exports, "fsCopyFile", { enumerable: true, get: function () { return fs_extra_1.copyFile; } });
+Object.defineProperty(exports, "fsEnsureDir", { enumerable: true, get: function () { return fs_extra_1.ensureDir; } });
+Object.defineProperty(exports, "fsMkdirp", { enumerable: true, get: function () { return fs_extra_1.mkdirp; } });
+Object.defineProperty(exports, "fsPathExists", { enumerable: true, get: function () { return fs_extra_1.pathExists; } });
+Object.defineProperty(exports, "fsReadJSON", { enumerable: true, get: function () { return fs_extra_1.readJSON; } });
+Object.defineProperty(exports, "fsWriteJSON", { enumerable: true, get: function () { return fs_extra_1.writeJSON; } });
