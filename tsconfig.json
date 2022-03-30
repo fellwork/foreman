@@ -1,18 +1,50 @@
 {
-  "extends": "./node_modules/@tsconfig/node16/tsconfig.json",
+  "$schema": "https://json.schemastore.org/tsconfig",
   "compilerOptions": {
+    "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
-    "noFallthroughCasesInSwitch": true,
-    "noImplicitAny": true,
-    "noImplicitReturns": true,
-    "noImplicitThis": true,
-    "noUncheckedIndexedAccess": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "preserveConstEnums": true,
-    "strictBindCallApply": true,
-    "strictFunctionTypes": true,
-    "strictNullChecks": true,
-    "strictPropertyInitialization": true,
-  }
+    "baseUrl": ".",
+    "esModuleInterop": true,
+    "importHelpers": true,
+    "lib": [
+      "es2021"
+    ],
+    "module": "esnext",
+    "moduleResolution": "node",
+    "preserveSymlinks": false,
+    "resolveJsonModule": true,
+    "rootDir": ".",
+    "skipLibCheck": true,
+    "strict": true,
+    "target": "es2021"
+  },
+  "references": [
+    {
+      "path": "packages/build"
+    },
+    {
+      "path": "packages/cli"
+    },
+    {
+      "path": "packages/config"
+    },
+    {
+      "path": "packages/esbuild-plugin"
+    },
+    {
+      "path": "packages/externals"
+    },
+    {
+      "path": "packages/foreman"
+    },
+    {
+      "path": "packages/loader"
+    },
+    {
+      "path": "packages/log"
+    },
+    {
+      "path": "packages/tsc"
+    }
+  ]
 }

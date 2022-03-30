@@ -1,17 +1,18 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "composite": true,
-    "emitDeclarationOnly": false,
-    "lib":[
-      "esnext"
-    ]
+    "rootDir": ".",
+    "baseUrl": "src",
+    "module": "esnext",
+    "composite": true
   },
   "include": [
-    "src/**/*"
+    "./src/*.ts",
+    "./src/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
+  "references": [
+    {
+      "path": "../externals"
+    }
   ]
 }
-

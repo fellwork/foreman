@@ -9,8 +9,7 @@ module.exports = {
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2022,
-    tsconfigRootDir: __dirname,
-    project: './tsconfig.json'
+    tsconfigRootDir: __dirname
   },
   rules: {
     'prettier/prettier': [

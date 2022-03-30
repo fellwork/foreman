@@ -1,4 +1,4 @@
-import { colors, format } from '@foreman/externals'
+import { colors, dateFormat } from './index'
 
 type Label = 'info' | 'success' | 'error' | 'warn'
 
@@ -11,4 +11,4 @@ export const makeLabel = (input: string, type: Label) =>
       : type === 'error'
       ? 'bgRed'
       : 'bgGreen'
-  ](colors.black(`[${input.toUpperCase()}-${format(new Date(), 'kk:mm:s')}]`))
+  ](colors.black(`[${input.toUpperCase()}-${dateFormat(new Date(), 'kk:mm:s')}]`))
