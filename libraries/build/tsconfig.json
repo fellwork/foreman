@@ -1,0 +1,12 @@
+{
+  "extends": "../../common/",
+  "compilerOptions": {
+    "rootDir": ".",
+    "baseUrl": "src",
+    "module": "esnext",
+  },
+  "include": [
+    "./src/*.ts",
+    "./src/**/*.ts"
+  ]
+}
