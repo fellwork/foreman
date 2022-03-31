@@ -1,9 +1,10 @@
 {
-  "extends": "../../common/",
+  "extends": "./node_modules/@rushstack/heft-node-rig/profiles/default/tsconfig-base.json",
   "compilerOptions": {
     "rootDir": ".",
     "baseUrl": "src",
     "module": "esnext",
+    "types": ["heft-jest", "node"]
   },
   "include": [
     "./src/*.ts",

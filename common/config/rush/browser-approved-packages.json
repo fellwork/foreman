@@ -1,0 +1,34 @@
+// DO NOT ADD COMMENTS IN THIS FILE.  They will be lost when the Rush tool resaves it.
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
+  "packages": [
+    {
+      "name": "@rushstack/eslint-config",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "@rushstack/heft",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "@rushstack/heft-node-rig",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "eslint",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "tslib",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "tsup",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "typescript",
+      "allowedCategories": [ "libraries" ]
+    }
+  ]
+}
