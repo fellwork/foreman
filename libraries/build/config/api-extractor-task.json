@@ -1,0 +1,4 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/heft/api-extractor-task.schema.json",
+  "extends": "common/config/docs/api-extractor.json"
+}

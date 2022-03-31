@@ -11,4 +11,8 @@ export const makeLabel = (input: string, type: Label) =>
       : type === 'error'
       ? 'bgRed'
       : 'bgGreen'
-  ](colors.black(`[${input.toUpperCase()}-${dateFormat(new Date(), 'kk:mm:s')}]`))
+  ](
+    colors.black(
+      `[${input.toUpperCase()}-${dateFormat(new Date(), 'kk:mm:s')}]`
+    )
+  )
