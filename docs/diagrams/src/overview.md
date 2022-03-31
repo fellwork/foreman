@@ -1,4 +1,0 @@
-# foreman
-
-Package building monorepo
-

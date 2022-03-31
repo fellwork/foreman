@@ -1,107 +1,20 @@
 {
-    //------ Editor ------//
-    "editor.fontFamily": "'Fira Code iScript', 'Fira Code', Consolas, 'Courier New', monospace",
-    "editor.fontLigatures": true,
-    "editor.fontSize": 14,
-    "editor.tokenColorCustomizations": {
-      "textMateRules": [
-        {
-          "scope": [
-            "comment",
-            // "entity.name.type.class", //class names
-            "keyword", //import, export, return…
-            "storage.modifier", //static keyword
-            "storage.type", //class keyword
-            "support.class.builtin",
-            "keyword.control",
-            // "constant.language",
-            "entity.other.attribute-name"
-            // "string.quoted.single",
-            // "entity.name.method",
-            // "entity.name.tag"
-          ],
-          "settings": {
-            "fontStyle": "italic" // the font style that should be applied
-          }
-        },
-        {
-          "scope": ["keyword.operator", "entity.name.type"],
-          "settings": {
-            "fontStyle": ""
-          }
-        }
-      ]
-    },
-    "editor.multiCursorModifier": "ctrlCmd",
-    "editor.detectIndentation": false,
-    "editor.inlineSuggest.enabled": true,
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.formatOnType": false,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true,
-      "source.fixAll.markdownlint": true
-    },
-    //------ Eslint ------//
-    "eslint.alwaysShowStatus": false,
-    "eslint.format.enable": true,
-    "eslint.enable": true,
-    "eslint.run": "onType",
-    "eslint.nodeEnv": "development",
-    "eslint.packageManager": "pnpm",
-    "eslint.probe": ["javascript", "typescript", "html", "vue", "markdown"],
-    "eslint.validate": [
-      "javascript",
-      "javascriptreact",
-      "typescript",
-      "typescriptreact",
-      "html",
-      "vue",
-      "vue-html"
-    ],
-    "eslint.options": {
-      "extensions": [".html", ".cjs", ".mjs", ".js", ".vue", ".jsx", ".ts"]
-    },
-    //------ Extensions ------//
-    "[jsonc]": {
-      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-      "editor.tabSize": 2
-    },
-    "[javascript]": {
-      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-      "editor.tabSize": 2
-    },
-    "[markdown]": {
-      "editor.defaultFormatter": "DavidAnson.vscode-markdownlint"
-    },
-    "[typescript]": {
-      "editor.defaultFormatter": "dbaeumer.vscode-eslint",
-      "editor.tabSize": 2
-    },
-    "javascript.inlayHints.enumMemberValues.enabled": true,
-    "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "javascript.inlayHints.parameterNames.enabled": "all",
-    "javascript.inlayHints.parameterTypes.enabled": true,
-    "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "javascript.updateImportsOnFileMove.enabled": "never",
-    "typescript.enablePromptUseWorkspaceTsdk": true,
-    "typescript.format.insertSpaceAfterConstructor": true,
-    "typescript.implementationsCodeLens.enabled": true,
-    "typescript.inlayHints.enumMemberValues.enabled": true,
-    "typescript.inlayHints.functionLikeReturnTypes.enabled": true,
-    "typescript.inlayHints.parameterNames.enabled": "all",
-    "typescript.inlayHints.parameterTypes.enabled": true,
-    "typescript.inlayHints.propertyDeclarationTypes.enabled": true,
-    "typescript.inlayHints.variableTypes.enabled": true,
-    "typescript.preferences.importModuleSpecifier": "project-relative",
-    "typescript.preferences.importModuleSpecifierEnding": "index",
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "typescript.updateImportsOnFileMove.enabled": "never",
-    "plantuml.includepaths": [
-      "docs/diagrams/style",
-      "docs/diagrams/src"
-    ],
-    "conventionalCommits.scopes": [
-      "externals"
-    ],
+  // Use the project's typescript version
+  "typescript.tsdk": "node_modules/typescript/lib",
+
+  "cSpell.enabledLanguageIds": ["markdown", "plaintext", "text", "yml"],
+
+  // Use prettier to format typescript, javascript and JSON files
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "conventionalCommits.scopes": [
+    "monorepo"
+  ]
 }
