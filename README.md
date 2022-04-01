@@ -31,7 +31,7 @@ $ rush add -p example-lib --all
 $ rush add -p example-lib@1.2.3
 # Specific version with caret: "^1.2.3"
 $ rush add -p example-lib@1.2.3 --caret
-# Specfic versions made consistent thru out repo
+# Specific versions made consistent thru out repo
 $ rush add -p example-lib@1.2.3 -m
 ```
 

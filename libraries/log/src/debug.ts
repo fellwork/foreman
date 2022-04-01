@@ -1,5 +1,5 @@
-import { default as format } from 'date-fns/format/index'
+import { dateFormat } from './index'
 
 export const debug = (input: string) => {
-  console.log(`[DEBUG-${format(new Date(), 'kk:mm:s')}]`, input)
+  console.log(`[DEBUG-${dateFormat(new Date(), 'kk:mm:s')}]`, input)
 }

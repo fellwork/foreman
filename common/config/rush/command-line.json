@@ -19,6 +19,34 @@
       // This will invoke common/autoinstall/rush-prettier/node_modules/.bin/pretty-quick
       "shellCommand": "pretty-quick --staged",
       "safeForSimultaneousRushProcesses": true
+    },
+    {
+      "name": "update-ts-refs",
+      "commandKind": "global",
+      "summary": "Used by pre-push Git hook. This command updates the Project references for TypeScript files.",
+      "autoinstallerName": "rush-update-ts-refs",
+      "shellCommand": "update-ts-references",
+      "safeForSimultaneousRushProcesses": true
+    },
+    {
+      "name": "build:watch",
+      "commandKind": "bulk",
+      "summary": "Build projects and watch for changes",
+      "description": "For details, see the article \"Using watch mode\" on the Rush website: https://rushjs.io/",
+
+      // use incremental build logic (important)
+      "incremental": true,
+      "enableParallelism": true,
+      // Enable "watch mode"
+      "watchForChanges": true
+    },
+    {
+      "name": "typedoc",
+      "commandKind": "global",
+      "summary": "Generate TypeDoc documentation",
+      "autoinstallerName": "rush-typedoc",
+      "shellCommand": "typedoc",
+      "safeForSimultaneousRushProcesses": true
     }
   ],
 

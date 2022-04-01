@@ -1,9 +1,36 @@
 {
   // Use the project's typescript version
   "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.formatOnSave": true,
+  "markdownlint.ignore": ["**/CHANGELOG.md"],
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
+  ],
+  "eslint.workingDirectories": [
+    {
+      "mode": "auto"
+    }
+  ],
 
   "cSpell.enabledLanguageIds": ["markdown", "plaintext", "text", "yml"],
-
+  "cSpell.enableFiletypes": [
+    "html",
+    "javascript",
+    "javascriptreact",
+    "latex",
+    "markdown",
+    "plaintext",
+    "text",
+    "typescript",
+    "typescriptreact",
+    "xml",
+    "yml"
+  ],
   // Use prettier to format typescript, javascript and JSON files
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -14,5 +41,31 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "conventionalCommits.scopes": ["monorepo"]
+  "conventionalCommits.scopes": ["monorepo"],
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.heft": true,
+    ".heft": true,
+    "**/.rush": true,
+    ".rush": true,
+    "**/node_modules": true,
+    "node_modules": true
+  },
+  "eslint.format.enable": true,
+  "eslint.lintTask.enable": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": true,
+    "editor.action.fixAll": true,
+    "source.fixAll.eslint": true
+  },
+  "npm.packageManager": "pnpm",
+  "npm-intellisense.packageSubfoldersIntellisense": true,
+  "eslint.packageManager": "pnpm",
+  "monorepoWorkspace.folders.regex.libs": "^common|package|lib|private|libraries",
+  "cSpell.words": ["autoinstaller", "autoinstallers", "pnpm"]
 }

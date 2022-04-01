@@ -2,6 +2,13 @@ import { colors, dateFormat } from './index'
 
 type Label = 'info' | 'success' | 'error' | 'warn'
 
+/**
+ * Make label for log type
+ * @public
+ * @param input - Label input string
+ * @param type - Label for corresponding type
+ * @returns
+ */
 export const makeLabel = (input: string, type: Label) =>
   colors[
     type === 'info'

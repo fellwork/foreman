@@ -1,0 +1,16 @@
+{
+  "name": "rush-typedoc",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "typedoc": "latest",
+    "typedoc-github-wiki-theme": "latest",
+    "typedoc-plugin-markdown": "latest"
+  },
+  "devDependencies": {
+    "typescript": "latest"
+  },
+  "peerDepenencies": {
+    "typescript": ">=4.6.x"
+  }
+}

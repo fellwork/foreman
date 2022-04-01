@@ -13,8 +13,8 @@
     "lib"
   ],
   "scripts": {
-    "build": "pnpm compile",
-    "compile": "heft build"
+    "build": "heft build --clean",
+    "build:watch": "heft build"
   },
   "engines": {
     "node": ">=12.20.0",
@@ -26,10 +26,13 @@
     "@rushstack/heft-node-rig": "latest",
     "@types/heft-jest": "latest",
     "@types/node": "latest",
+    "chalk": "latest",
+    "date-fns": "latest",
     "eslint": "latest",
     "tslib": "latest",
     "tsup": "latest",
-    "typescript": "latest"
+    "typescript": "latest",
+    "typedoc": "~0.22.13"
   },
   "publishConfig": {
     "access": "public"

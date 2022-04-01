@@ -15,6 +15,14 @@
       "allowedCategories": [ "libraries" ]
     },
     {
+      "name": "chalk",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "date-fns",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
       "name": "eslint",
       "allowedCategories": [ "libraries" ]
     },
@@ -24,6 +32,10 @@
     },
     {
       "name": "tsup",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "typedoc",
       "allowedCategories": [ "libraries" ]
     },
     {

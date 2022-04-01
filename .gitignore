@@ -69,3 +69,8 @@ common/autoinstallers/*/.npmrc
 
 # Local history
 .history
+
+# temp files
+**/temp
+**/dist
+**/lib
