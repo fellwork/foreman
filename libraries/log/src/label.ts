@@ -1,4 +1,4 @@
-import { colors, dateFormat } from './index'
+import { colors, dateFormat } from './_api'
 
 type Label = 'info' | 'success' | 'error' | 'warn'
 
@@ -9,8 +9,8 @@ type Label = 'info' | 'success' | 'error' | 'warn'
  * @param type - Label for corresponding type
  * @returns
  */
-export const makeLabel = (input: string, type: Label) =>
-  colors[
+export const makeLabel = (input: string, type: Label): string => {
+  return colors[
     type === 'info'
       ? 'bgBlue'
       : type === 'warn'
@@ -20,6 +20,7 @@ export const makeLabel = (input: string, type: Label) =>
       : 'bgGreen'
   ](
     colors.black(
-      `[${input.toUpperCase()}-${dateFormat(new Date(), 'kk:mm:s')}]`
-    )
+      `[${input.toUpperCase()}-${dateFormat(new Date(), 'kk:mm:s')}]`,
+    ),
   )
+}
