@@ -116,7 +116,7 @@
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     }
   ]
 }
