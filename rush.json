@@ -87,11 +87,8 @@
    * and "nonbrowser-approved-packages.json".  See the Rush documentation for details.
    */
   "approvedPackagesPolicy": {
-    "reviewCategories": [
-      "libraries", // library projects that ship
-      "tests" // non-shipping test projects
-    ],
-    "ignoredNpmScopes": ["@types"]
+    "reviewCategories": ["conventions", "libraries", "tests"],
+    "ignoredNpmScopes": ["@types", "@babel"]
   },
 
   /**
@@ -122,6 +119,20 @@
   },
 
   "projects": [
+    // conventions
+    {
+      "packageName": "prettier-config-foreman",
+      "projectFolder": "conventions/prettier-config",
+      "reviewCategory": "conventions",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "eslint-plugin-foreman",
+      "projectFolder": "conventions/eslint-plugin",
+      "reviewCategory": "conventions",
+      "shouldPublish": false
+    },
+    // libraries
     {
       "packageName": "@fellwork/foreman-build",
       "projectFolder": "libraries/build",

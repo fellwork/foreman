@@ -21,14 +21,6 @@
       "safeForSimultaneousRushProcesses": true
     },
     {
-      "name": "update-ts-refs",
-      "commandKind": "global",
-      "summary": "Used by pre-push Git hook. This command updates the Project references for TypeScript files.",
-      "autoinstallerName": "rush-update-ts-refs",
-      "shellCommand": "update-ts-references",
-      "safeForSimultaneousRushProcesses": true
-    },
-    {
       "name": "build:watch",
       "commandKind": "bulk",
       "summary": "Build projects and watch for changes",
@@ -39,6 +31,12 @@
       "enableParallelism": true,
       // Enable "watch mode"
       "watchForChanges": true
+    },
+    {
+      "name": "pkg-json-lint",
+      "commandKind": "global",
+      "summary": "Lint all package.json files in the repo",
+      "shellCommand": "npx npm-package-json-lint -c common/config/lint/npmpackagejsonlint.config.js ."
     },
     {
       "name": "typedoc",

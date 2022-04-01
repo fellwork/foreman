@@ -7,12 +7,24 @@
       "allowedCategories": [ "libraries" ]
     },
     {
+      "name": "@rushstack/eslint-patch",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
       "name": "@rushstack/heft",
       "allowedCategories": [ "libraries" ]
     },
     {
       "name": "@rushstack/heft-node-rig",
       "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "@typescript-eslint/eslint-plugin",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "conventions" ]
     },
     {
       "name": "chalk",
@@ -24,7 +36,71 @@
     },
     {
       "name": "eslint",
+      "allowedCategories": [ "conventions", "libraries" ]
+    },
+    {
+      "name": "eslint-config-prettier",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-es",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-eslint-comments",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-filenames",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-foreman",
       "allowedCategories": [ "libraries" ]
+    },
+    {
+      "name": "eslint-plugin-import",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-markdown",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-n",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-prettier",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-sort-keys-fix",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-unicorn",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "prettier",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "prettier-config",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "prettier-config-foreman",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "requireindex",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "sort-package-json",
+      "allowedCategories": [ "conventions" ]
     },
     {
       "name": "tslib",

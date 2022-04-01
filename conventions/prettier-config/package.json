@@ -1,0 +1,8 @@
+{
+  "name": "prettier-config-foreman",
+  "version": "1.0.0",
+  "description": "Shared prettier config",
+  "main": "prettier.json",
+  "repository": "foreman/prettier-config",
+  "license": "MIT"
+}
