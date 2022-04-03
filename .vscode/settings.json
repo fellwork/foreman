@@ -33,7 +33,10 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "conventionalCommits.scopes": ["monorepo"],
+  "conventionalCommits.scopes": [
+    "monorepo",
+    "lint"
+  ],
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,

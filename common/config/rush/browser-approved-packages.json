@@ -8,7 +8,7 @@
     },
     {
       "name": "@rushstack/eslint-patch",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "@rushstack/heft",
@@ -72,6 +72,10 @@
     },
     {
       "name": "eslint-plugin-prettier",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-promise",
       "allowedCategories": [ "conventions" ]
     },
     {
