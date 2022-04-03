@@ -1,10 +1,13 @@
+require('../eslint-patch/src/index');
+
 module.exports = {
-  extends: ['./src/config/patch', './src/config/strict', './src/config/prettier'],
+  root: true,
+  extends: ['./src/config/strict', './src/config/prettier'],
   overrides: [
     {
-      files: ['src/config/base.js'],
+      files: ['./src/**/*.js'],
       rules: {
-        'sort-keys-fix/sort-keys-fix': ['error', 'asc', { natural: false }]
+        'sort-keys-fix/sort-keys-fix': 'off'
       }
     }
   ]

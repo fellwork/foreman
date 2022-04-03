@@ -43,6 +43,10 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "eslint-patch-foreman",
+      "allowedCategories": [ "libraries" ]
+    },
+    {
       "name": "eslint-plugin-es",
       "allowedCategories": [ "conventions" ]
     },
@@ -59,7 +63,15 @@
       "allowedCategories": [ "libraries" ]
     },
     {
+      "name": "eslint-plugin-html",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "eslint-plugin-import",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-jsonc",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -84,6 +96,14 @@
     },
     {
       "name": "eslint-plugin-unicorn",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-yml",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "jsonc-eslint-parser",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -121,6 +141,10 @@
     {
       "name": "typescript",
       "allowedCategories": [ "conventions", "libraries" ]
+    },
+    {
+      "name": "yaml-eslint-parser",
+      "allowedCategories": [ "conventions" ]
     },
     {
       "name": "yargs",

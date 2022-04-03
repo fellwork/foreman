@@ -1,13 +1,12 @@
 'use strict';
 
 module.exports = {
-  extends: [require.resolve('./base')],
   plugins: ['@typescript-eslint'],
   overrides: [
     {
       files: ['*.ts', '*.tsx'],
-      parser: '@typescript-eslint/parser',
       extends: ['plugin:@typescript-eslint/recommended', 'plugin:import/typescript'],
+      parser: '@typescript-eslint/parser',
       rules: {
         'brace-style': 'off',
         camelcase: 'off',
@@ -25,7 +24,6 @@ module.exports = {
         'no-unused-expressions': 'off',
         'no-unused-vars': 'off',
         'no-use-before-define': 'off',
-        'no-useless-constructor': 'off',
         'no-useless-constructor': 'off',
         'no-void': ['error', { allowAsStatement: true }],
         quotes: 'off',
@@ -242,5 +240,10 @@ module.exports = {
         '@typescript-eslint/type-annotation-spacing': 'error'
       }
     }
-  ]
+  ],
+  settings: {
+    'import/resolver': {
+      node: { extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', '.d.ts'] }
+    }
+  }
 };

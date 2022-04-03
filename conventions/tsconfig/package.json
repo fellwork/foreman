@@ -1,0 +1,15 @@
+{
+  "name": "tsconfig-foreman",
+  "version": "1.0.0",
+  "description": "Conventional tsconfig for the foreman monorepo",
+  "keywords": [
+    "tsconfig",
+    "foreman"
+  ],
+  "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
+  "main": "tsconfig.json",
+  "license": "MIT",
+  "engines": {
+    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
+  }
+}

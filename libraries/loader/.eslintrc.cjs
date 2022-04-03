@@ -1,34 +1,13 @@
-require('@rushstack/eslint-config/patch/modern-module-resolution');
+const { resolve } = require('path');
+
+// eslint-disable-next-line import/no-unassigned-import
+require('eslint-patch-foreman');
+// eslint-disable-next-line import/no-unassigned-import
 
 module.exports = {
-  extends: [
-    '@rushstack/eslint-config/profile/node',
-    '@rushstack/eslint-config/mixins/friendly-locals'
-  ],
+  extends: ['plugin:foreman/typescript', 'plugin:foreman/prettier'],
   parserOptions: {
-    sourceType: 'module',
-    ecmaVersion: 2022,
-    tsconfigRootDir: __dirname
-  },
-  overrides: [
-    {
-      files: ['*.ts', '*.tsx'],
-
-      rules: {
-        '@typescript-eslint/no-explicit-any': 'off',
-        '@typescript-eslint/explicit-function-return-type': 'off',
-        '@typescript-eslint/naming-convention': [
-          'error',
-          {
-            selector: 'interface',
-            format: ['PascalCase'],
-            custom: {
-              regex: '^[A-Z]',
-              match: true
-            }
-          }
-        ]
-      }
-    }
-  ]
+    tsconfigRootDir: __dirname,
+    project: [resolve(__dirname, './tsconfig.json')]
+  }
 };

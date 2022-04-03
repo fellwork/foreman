@@ -2,6 +2,11 @@
   "name": "prettier-config-foreman",
   "version": "1.0.0",
   "description": "Shared prettier config",
+  "keywords": [
+    "prettier",
+    "config"
+  ],
+  "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
   "main": "prettier.json",
   "repository": "foreman/prettier-config",
   "license": "MIT"

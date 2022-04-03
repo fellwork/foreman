@@ -17,7 +17,7 @@ module.exports = {
     ],
 
     // Optional eslint rules:
-    'no-console': 'error',
-    'sort-keys-fix/sort-keys-fix': ['error', 'asc']
+    'no-console': 'error'
+    // 'sort-keys-fix/sort-keys-fix': ['error', 'asc']
   }
 };

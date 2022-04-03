@@ -2,6 +2,12 @@
   "name": "eslint-plugin-foreman",
   "version": "1.0.0",
   "description": "Conventional ESLint plugin for the foreman monorepo",
+  "keywords": [
+    "eslint",
+    "plugin",
+    "foreman"
+  ],
+  "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
   "main": "./src/index.js",
   "exports": "./src/index.js",
   "license": "MIT",
@@ -13,14 +19,19 @@
     "eslint-plugin-es": "^4.1.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-filenames": "^1.3.2",
+    "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-promise": "^6.0.0",
-    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-jsonc": "^2.2.1",
     "eslint-plugin-markdown": "^2.2.1",
     "eslint-plugin-n": "^15.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-promise": "^6.0.0",
     "eslint-plugin-sort-keys-fix": "^1.1.2",
-    "requireindex": "^1.2.0"
+    "eslint-plugin-unicorn": "^42.0.0",
+    "eslint-plugin-yml": "^0.14.0",
+    "jsonc-eslint-parser": "^2.1.0",
+    "requireindex": "^1.2.0",
+    "yaml-eslint-parser": "^0.5.0"
   },
   "devDependencies": {
     "@babel/core": "^7.17.8",

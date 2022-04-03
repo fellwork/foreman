@@ -1,18 +1,149 @@
 'use strict';
-const imports = require.resolve('../plugins/import');
-const node = require.resolve('../plugins/node');
-// const filenames = require('../utils/filenames');
+
 module.exports = {
   env: {
-    es2021: true,
+    es6: true,
+    browser: true,
     node: true
   },
-  extends: ['plugin:eslint-comments/recommended', 'plugin:unicorn/recommended', imports, node],
-  globals: {
-    document: 'readonly',
-    navigator: 'readonly',
-    window: 'readonly'
-  },
+  extends: [
+    require.resolve('../plugins/standard'),
+    'plugin:import/recommended',
+    'plugin:eslint-comments/recommended',
+    'plugin:jsonc/recommended-with-jsonc',
+    'plugin:yml/standard',
+    'plugin:markdown/recommended'
+  ],
+  ignorePatterns: [
+    '*.min.*',
+    '*.build.log',
+    'CHANGELOG.md',
+    'LICENSE*',
+    'coverage',
+    '**/node_modules/**',
+    '**/dist/**',
+    '**/build/**',
+    '**/lib/**',
+    '**/temp/**',
+    '**/__tests__/**',
+    '**/__mocks__/**',
+    '**/__fixtures__/**',
+    '**/__snapshots__/**',
+    '.history',
+    'packages-lock.json',
+    'pnpm-lock.yaml',
+    'yarn.lock',
+    '!.github',
+    '!.vscode'
+  ],
+  overrides: [
+    // Overrides from @antfu/eslint-config
+    {
+      files: ['*.json', '*.json5'],
+      parser: 'jsonc-eslint-parser',
+      rules: {
+        quotes: ['error', 'double'],
+        'quote-props': ['error', 'always'],
+        'comma-dangle': ['error', 'never']
+      }
+    },
+    {
+      files: ['*.yaml', '*.yml'],
+      parser: 'yaml-eslint-parser',
+      rules: {
+        'spaced-comment': 'off'
+      }
+    },
+    {
+      files: ['package.json'],
+      parser: 'jsonc-eslint-parser',
+      rules: {
+        'jsonc/sort-keys': [
+          'error',
+          {
+            pathPattern: '^$',
+            order: [
+              'name',
+              'type',
+              'version',
+              'private',
+              'packageManager',
+              'description',
+              'keywords',
+              'license',
+              'author',
+              'repository',
+              'funding',
+              'main',
+              'module',
+              'types',
+              'unpkg',
+              'jsdelivr',
+              'exports',
+              'files',
+              'bin',
+              'sideEffects',
+              'scripts',
+              'peerDependencies',
+              'peerDependenciesMeta',
+              'dependencies',
+              'optionalDependencies',
+              'devDependencies',
+              'husky',
+              'lint-staged',
+              'eslintConfig',
+              'prettier'
+            ]
+          },
+          {
+            pathPattern: '^(?:dev|peer|optional|bundled)?[Dd]ependencies$',
+            order: { type: 'asc' }
+          }
+        ]
+      }
+    },
+    {
+      files: ['*.d.ts'],
+      rules: {
+        'import/no-duplicates': 'off'
+      }
+    },
+    {
+      files: ['*.js'],
+      rules: {
+        '@typescript-eslint/no-var-requires': 'off'
+      }
+    },
+    {
+      files: ['scripts/**/*.*', 'cli.*'],
+      rules: {
+        'no-console': 'off'
+      }
+    },
+    {
+      files: ['*.test.ts', '*.test.js', '*.spec.ts', '*.spec.js'],
+      rules: {
+        'no-unused-expressions': 'off'
+      }
+    },
+    {
+      // Code blocks in markdown file
+      files: ['**/*.md/*.*'],
+      rules: {
+        '@typescript-eslint/no-redeclare': 'off',
+        '@typescript-eslint/no-unused-vars': 'off',
+        '@typescript-eslint/no-use-before-define': 'off',
+        '@typescript-eslint/no-var-requires': 'off',
+        'import/no-unresolved': 'off',
+        'no-alert': 'off',
+        'no-console': 'off',
+        'no-restricted-imports': 'off',
+        'no-undef': 'off',
+        'no-unused-expressions': 'off',
+        'no-unused-vars': 'off'
+      }
+    }
+  ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true
@@ -20,7 +151,7 @@ module.exports = {
     ecmaVersion: 2022,
     sourceType: 'module'
   },
-  plugins: ['es', 'eslint-comments', 'filenames', 'promise', 'unicorn'],
+  plugins: ['es', 'eslint-comments', 'filenames', 'html', 'promise', 'unicorn'],
   rules: {
     // Optional eslint rules:
     'accessor-pairs': [
@@ -524,7 +655,7 @@ module.exports = {
 
     'rest-spread-spacing': ['error', 'never'],
 
-    semi: ['error', 'never'],
+    semi: ['error', 'always'],
 
     'semi-spacing': [
       'error',
@@ -554,13 +685,14 @@ module.exports = {
       'error',
       'always',
       {
-        block: {
-          balanced: true,
-          exceptions: ['*'],
-          markers: ['!', '*package', ',', ':', '::', 'flow-include']
-        },
         line: {
-          markers: ['!', '*package', ',', '/', '=']
+          markers: ['/'],
+          exceptions: ['/', '#']
+        },
+        block: {
+          markers: ['!'],
+          exceptions: ['*'],
+          balanced: true
         }
       }
     ],
@@ -574,22 +706,6 @@ module.exports = {
     'unicode-bom': ['error', 'never'],
 
     // Unicorn rules:
-    'unicorn/catch-error-name': 'off',
-
-    // We use many different valid names for our try/catch errors.
-    'unicorn/consistent-function-scoping': 'off',
-
-    // We have a lot of functions in different scopes.
-    'unicorn/import-style': 'off',
-
-    // Too noisy, not useful enough.
-    'unicorn/no-array-callback-reference': 'off',
-
-    // We use this a lot.
-    'unicorn/no-array-for-each': 'off',
-
-    // We use a lot of `forEach` and this may be too opinionated.
-    'unicorn/no-array-reduce': 'off',
 
     // We use a lot of `reduce`.
     'unicorn/no-lonely-if': 'off',
@@ -618,9 +734,6 @@ module.exports = {
     // The autofixer can be unsafe.
     'unicorn/prefer-module': 'off',
 
-    // Not ready for this yet.
-    'unicorn/prefer-node-protocol': 'off',
-
     // Big change, enable later.
     'unicorn/prefer-prototype-methods': 'off',
 
@@ -630,11 +743,36 @@ module.exports = {
     // The autofixer can be unsafe.
     'unicorn/prefer-switch': 'off',
 
-    // Too aggressive for now.
-    'unicorn/prefer-ternary': 'off',
+    // Testing: very aggressive
+    // 'unicorn/prefer-ternary': 'off',
 
-    // Too many violations.
-    'unicorn/prevent-abbreviations': 'off',
+    // Testing: possibly Too many violations.
+    // 'unicorn/prevent-abbreviations': 'off',
+
+    // Pass error message when throwing errors
+    'unicorn/error-message': 'error',
+    // Uppercase regex escapes
+    'unicorn/escape-case': 'error',
+    // Array.isArray instead of instanceof
+    'unicorn/no-array-instanceof': 'error',
+    // Prevent deprecated `new Buffer()`
+    'unicorn/no-new-buffer': 'error',
+    // Keep regex literals safe!
+    'unicorn/no-unsafe-regex': 'off',
+    // Lowercase number formatting for octal, hex, binary (0x1'error' instead of 0X1'error')
+    'unicorn/number-literal-case': 'error',
+    // ** instead of Math.pow()
+    'unicorn/prefer-exponentiation-operator': 'error',
+    // includes over indexOf when checking for existence
+    'unicorn/prefer-includes': 'error',
+    // String methods startsWith/endsWith instead of more complicated stuff
+    'unicorn/prefer-starts-ends-with': 'error',
+    // textContent instead of innerText
+    'unicorn/prefer-text-content': 'error',
+    // Enforce throwing type error when throwing error while checking typeof
+    'unicorn/prefer-type-error': 'error',
+    // Use new when throwing error
+    'unicorn/throw-new-error': 'error',
 
     'use-isnan': [
       'error',
@@ -661,6 +799,13 @@ module.exports = {
 
     'yield-star-spacing': ['error', 'both'],
 
-    yoda: ['error', 'never']
+    yoda: ['error', 'never'],
+
+    'eslint-comments/disable-enable-pair': 'off'
+  },
+  settings: {
+    'import/resolver': {
+      node: { extensions: ['.js', '.mjs'] }
+    }
   }
 };

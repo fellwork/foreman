@@ -127,8 +127,20 @@
       "shouldPublish": false
     },
     {
+      "packageName": "eslint-patch-foreman",
+      "projectFolder": "conventions/eslint-patch",
+      "reviewCategory": "conventions",
+      "shouldPublish": false
+    },
+    {
       "packageName": "eslint-plugin-foreman",
       "projectFolder": "conventions/eslint-plugin",
+      "reviewCategory": "conventions",
+      "shouldPublish": false
+    },
+    {
+      "packageName": "tsconfig-foreman",
+      "projectFolder": "conventions/tsconfig",
       "reviewCategory": "conventions",
       "shouldPublish": false
     },
