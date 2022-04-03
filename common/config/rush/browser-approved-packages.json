@@ -121,6 +121,10 @@
     {
       "name": "typescript",
       "allowedCategories": [ "conventions", "libraries" ]
+    },
+    {
+      "name": "yargs",
+      "allowedCategories": [ "libraries" ]
     }
   ]
 }

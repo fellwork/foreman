@@ -1,10 +1,10 @@
-'use strict'
+'use strict';
 
-const requireIndex = require('requireindex')
+const requireIndex = require('requireindex');
 
 module.exports = {
   configs: requireIndex(`${__dirname}/config`),
   utils: {
-    filenames: require('./utils/filenames'),
-  },
-}
+    filenames: require('./utils/filenames')
+  }
+};

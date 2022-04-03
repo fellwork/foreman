@@ -2,12 +2,7 @@
   // Use the project's typescript version
   "typescript.tsdk": "node_modules/typescript/lib",
   "markdownlint.ignore": ["**/CHANGELOG.md"],
-  "eslint.validate": [
-    "javascript",
-    "javascriptreact",
-    "typescript",
-    "typescriptreact"
-  ],
+  "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
   "cSpell.enabledLanguageIds": ["markdown", "plaintext", "text", "yml"],
   "cSpell.enableFiletypes": [
@@ -33,10 +28,7 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "conventionalCommits.scopes": [
-    "monorepo",
-    "lint"
-  ],
+  "conventionalCommits.scopes": ["monorepo", "lint"],
   "files.exclude": {
     "**/.git": true,
     "**/.svn": true,
