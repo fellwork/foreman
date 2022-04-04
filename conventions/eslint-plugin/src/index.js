@@ -7,7 +7,5 @@ const requireIndex = require('requireindex');
 module.exports = {
   configs: requireIndex(join(__dirname, 'config')),
   plugins: requireIndex(join(__dirname, 'plugins')),
-  utils: {
-    filenames: require('./utils/filenames')
-  }
+  patch: require('./patch')
 };

@@ -1,13 +1,25 @@
 {
-  "name": "prettier-config-foreman",
+  "name": "@fellwork/prettier-config-foreman",
   "version": "1.0.0",
-  "description": "Shared prettier config",
+  "description": "Shared prettier config for the foreman monorepo",
   "keywords": [
     "prettier",
     "config"
   ],
   "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
   "main": "prettier.json",
-  "repository": "foreman/prettier-config",
-  "license": "MIT"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fellwork/foreman.git",
+    "directory": "conventions/prettier-config"
+  },
+  "license": "MIT",
+  "engines": {
+    "node": ">=12.20.0",
+    "pnpm": ">=6.32.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@6.32.4"
 }

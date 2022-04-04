@@ -7,14 +7,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        printWidth: 100,
-        quoteProps: 'as-needed',
-        requirePragma: false,
-        semi: true,
-        singleQuote: true,
-        tabWidth: 2,
-        trailingComma: 'none',
-        useTabs: false
+        usePrettierrc: true
       }
     ]
   }

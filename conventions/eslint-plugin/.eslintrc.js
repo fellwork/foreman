@@ -1,4 +1,4 @@
-require('../eslint-patch/src/index');
+require('@fellwork/foreman-eslint-patch');
 
 module.exports = {
   root: true,

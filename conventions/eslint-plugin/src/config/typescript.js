@@ -1,6 +1,7 @@
 'use strict';
 
 module.exports = {
+  extends: [require.resolve('./base')],
   plugins: ['@typescript-eslint'],
   overrides: [
     {

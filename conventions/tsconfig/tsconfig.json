@@ -10,6 +10,7 @@
     "module": "ESNext",
     "alwaysStrict": true,
     "allowUmdGlobalAccess": true,
+    "forceConsistentCasingInFileNames": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
     "esModuleInterop": true,

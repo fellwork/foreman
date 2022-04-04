@@ -1,10 +1,20 @@
 {
-  "name": "eslint-patch-foreman",
+  "name": "@fellwork/foreman-eslint-patch",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "Conventional ESLint patch for the foreman monorepo",
+  "keywords": [
+    "eslint",
+    "modern",
+    "patch"
+  ],
   "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
-  "main": "./src/index.js",
-  "exports": "./src/patch.js",
+  "main": "src/index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fellwork/foreman.git",
+    "directory": "conventions/eslint-patch"
+  },
   "license": "MIT",
   "dependencies": {
     "@rushstack/eslint-patch": "^1.1.1"
@@ -16,6 +26,11 @@
     "eslint": ">= 8.8.0"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
-  }
+    "node": ">=12.20.0",
+    "pnpm": ">=6.32.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@6.32.4"
 }

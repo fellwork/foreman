@@ -1,11 +1,11 @@
 {
-  "extends": "./node_modules/@rushstack/heft-node-rig/profiles/default/tsconfig-base.json",
+  "extends": "./node_modules/@fellwork/foreman-tsconfig/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",
     "lib": ["esnext"],
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "types": ["heft-jest", "node"]
+    "types": ["node"]
   }
 }

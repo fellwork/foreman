@@ -121,28 +121,40 @@
   "projects": [
     // conventions
     {
-      "packageName": "prettier-config-foreman",
-      "projectFolder": "conventions/prettier-config",
+      "packageName": "@fellwork/foreman-esbuild-plugin",
+      "projectFolder": "conventions/esbuild-plugin",
       "reviewCategory": "conventions",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
-      "packageName": "eslint-patch-foreman",
+      "packageName": "@fellwork/foreman-eslint-patch",
       "projectFolder": "conventions/eslint-patch",
       "reviewCategory": "conventions",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
-      "packageName": "eslint-plugin-foreman",
+      "packageName": "@fellwork/eslint-plugin-foreman",
       "projectFolder": "conventions/eslint-plugin",
       "reviewCategory": "conventions",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     {
-      "packageName": "tsconfig-foreman",
+      "packageName": "@fellwork/prettier-config-foreman",
+      "projectFolder": "conventions/prettier-config",
+      "reviewCategory": "conventions",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@fellwork/foreman-rollup-config",
+      "projectFolder": "conventions/rollup-config",
+      "reviewCategory": "conventions",
+      "shouldPublish": true
+    },
+    {
+      "packageName": "@fellwork/foreman-tsconfig",
       "projectFolder": "conventions/tsconfig",
       "reviewCategory": "conventions",
-      "shouldPublish": false
+      "shouldPublish": true
     },
     // libraries
     {
@@ -163,12 +175,7 @@
       "reviewCategory": "libraries",
       "shouldPublish": true
     },
-    {
-      "packageName": "@fellwork/esbuild-plugin-foreman",
-      "projectFolder": "libraries/esbuild-plugin",
-      "reviewCategory": "libraries",
-      "shouldPublish": true
-    },
+
     {
       "packageName": "@fellwork/foreman",
       "projectFolder": "libraries/foreman",

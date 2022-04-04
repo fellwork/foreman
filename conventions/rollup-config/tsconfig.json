@@ -1,3 +1,11 @@
 {
-  "extends": "tsconfig-foreman"
+  "extends": "./node_modules/@fellwork/foreman-tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "lib": ["esnext"],
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "types": ["node"]
+  }
 }

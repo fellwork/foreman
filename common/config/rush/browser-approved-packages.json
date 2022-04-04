@@ -3,6 +3,30 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@fellwork/eslint-plugin-foreman",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@fellwork/foreman-eslint-patch",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@fellwork/foreman-eslint-plugin",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@fellwork/foreman-prettier-config",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@fellwork/foreman-tsconfig",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@fellwork/prettier-config-foreman",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "@rushstack/eslint-config",
       "allowedCategories": [ "libraries" ]
     },
@@ -12,11 +36,11 @@
     },
     {
       "name": "@rushstack/heft",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "@rushstack/heft-node-rig",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "@typescript-eslint/eslint-plugin",
@@ -128,7 +152,7 @@
     },
     {
       "name": "tslib",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "tsup",
@@ -136,7 +160,7 @@
     },
     {
       "name": "typedoc",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "typescript",

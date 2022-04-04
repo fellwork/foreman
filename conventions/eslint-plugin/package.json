@@ -1,18 +1,41 @@
 {
-  "name": "eslint-plugin-foreman",
+  "name": "@fellwork/eslint-plugin-foreman",
   "version": "1.0.0",
+  "type": "commonjs",
   "description": "Conventional ESLint plugin for the foreman monorepo",
   "keywords": [
     "eslint",
     "plugin",
     "foreman"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fellwork/foreman.git",
+    "directory": "conventions/eslint-plugin"
+  },
   "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
   "main": "./src/index.js",
-  "exports": "./src/index.js",
+  "exports": {
+    "./base": {
+      "require": "./src/config/base.js"
+    },
+    "./patch": {
+      "require": "./src/config/patch.js"
+    },
+    "./prettier": {
+      "require": "./src/config/prettier.js"
+    },
+    "./strict": {
+      "require": "./src/config/strict.js"
+    },
+    "./typescript": {
+      "require": "./src/config/typescript.js"
+    }
+  },
   "license": "MIT",
   "dependencies": {
-    "@rushstack/eslint-patch": "^1.1.1",
+    "@fellwork/foreman-eslint-patch": "workspace:*",
+    "@fellwork/prettier-config-foreman": "workspace:*",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "eslint-config-prettier": "^8.5.0",
@@ -34,14 +57,8 @@
     "yaml-eslint-parser": "^0.5.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
-    "@babel/eslint-parser": "^7.17.0",
-    "@babel/plugin-proposal-class-properties": "^7.16.7",
-    "@babel/plugin-proposal-decorators": "^7.17.8",
     "eslint": "^8.12.0",
     "prettier": "^2.6.1",
-    "prettier-config-foreman": "workspace:^1.0.0",
-    "sort-package-json": "^1.55.0",
     "typescript": "^4.5.5"
   },
   "peerDependencies": {
@@ -49,6 +66,11 @@
     "typescript": ">= 3.7.0"
   },
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
-  }
+    "node": ">=12.20.0",
+    "pnpm": ">=6.32.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@6.32.4"
 }

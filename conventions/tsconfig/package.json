@@ -1,5 +1,5 @@
 {
-  "name": "tsconfig-foreman",
+  "name": "@fellwork/foreman-tsconfig",
   "version": "1.0.0",
   "description": "Conventional tsconfig for the foreman monorepo",
   "keywords": [
@@ -7,9 +7,19 @@
     "foreman"
   ],
   "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fellwork/foreman.git",
+    "directory": "conventions/tsconfig"
+  },
   "main": "tsconfig.json",
   "license": "MIT",
   "engines": {
-    "node": "^12.22.0 || ^14.17.0 || >=16.0.0"
-  }
+    "node": ">=12.20.0",
+    "pnpm": ">=6.32.4"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "packageManager": "pnpm@6.32.4"
 }
