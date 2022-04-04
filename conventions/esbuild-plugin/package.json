@@ -1,5 +1,5 @@
 {
-  "name": "@fellwork/foreman-esbuild-plugin",
+  "name": "@fellwork/esbuild-plugin-foreman",
   "version": "0.0.0",
   "type": "module",
   "repository": {
@@ -22,11 +22,9 @@
     "pnpm": ">=6.32.4"
   },
   "devDependencies": {
-    "@fellwork/foreman-tsconfig": "workspace:*",
+    "@fellwork/foreman-typescript": "workspace:*",
     "@fellwork/eslint-plugin-foreman": "workspace:*",
-    "@types/node": "^17.0.23",
-    "eslint": "^8.12.0",
-    "typescript": "^4.5.5"
+    "eslint": "^8.12.0"
   },
   "publishConfig": {
     "access": "public"

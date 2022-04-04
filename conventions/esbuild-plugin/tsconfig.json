@@ -1,5 +1,5 @@
 {
-  "extends": "./node_modules/@fellwork/foreman-tsconfig/tsconfig.json",
+  "extends": "./node_modules/@fellwork/foreman-typescript/tsconfig.json",
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",

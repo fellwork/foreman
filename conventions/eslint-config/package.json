@@ -1,40 +1,19 @@
 {
-  "name": "@fellwork/eslint-plugin-foreman",
+  "name": "@fellwork/eslint-config-foreman",
   "version": "1.0.0",
   "type": "commonjs",
-  "description": "Conventional ESLint plugin for the foreman monorepo",
-  "keywords": [
-    "eslint",
-    "plugin",
-    "foreman"
-  ],
+  "license": "MIT",
+  "description": "Conventional ESLint typescript config for the foreman monorepo",
   "repository": {
     "type": "git",
     "url": "https://github.com/fellwork/foreman.git",
-    "directory": "conventions/eslint-plugin"
+    "directory": "conventions/eslint-config"
   },
   "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
-  "main": "./src/index.js",
-  "exports": {
-    "./base": {
-      "require": "./src/config/base.js"
-    },
-    "./patch": {
-      "require": "./src/config/patch.js"
-    },
-    "./prettier": {
-      "require": "./src/config/prettier.js"
-    },
-    "./strict": {
-      "require": "./src/config/strict.js"
-    },
-    "./typescript": {
-      "require": "./src/config/typescript.js"
-    }
-  },
-  "license": "MIT",
+  "main": "config.cjs",
   "dependencies": {
     "@fellwork/prettier-config-foreman": "workspace:*",
+    "@rushstack/eslint-patch": "^1.1.1",
     "@typescript-eslint/eslint-plugin": "^5.17.0",
     "@typescript-eslint/parser": "^5.17.0",
     "eslint-config-prettier": "^8.5.0",
@@ -52,7 +31,6 @@
     "eslint-plugin-unicorn": "^42.0.0",
     "eslint-plugin-yml": "^0.14.0",
     "jsonc-eslint-parser": "^2.1.0",
-    "requireindex": "^1.2.0",
     "yaml-eslint-parser": "^0.5.0"
   },
   "devDependencies": {
@@ -71,5 +49,10 @@
   "publishConfig": {
     "access": "public"
   },
-  "packageManager": "pnpm@6.32.4"
+  "packageManager": "pnpm@6.32.4",
+  "keywords": [
+    "eslint",
+    "config",
+    "foreman"
+  ]
 }

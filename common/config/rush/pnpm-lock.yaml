@@ -8,29 +8,66 @@ importers:
   ../../conventions/esbuild-plugin:
     specifiers:
       '@fellwork/eslint-plugin-foreman': workspace:*
-      '@fellwork/foreman-tsconfig': workspace:*
-      '@types/node': ^17.0.23
+      '@fellwork/foreman-typescript': workspace:*
       eslint: ^8.12.0
-      typescript: ^4.5.5
     devDependencies:
       '@fellwork/eslint-plugin-foreman': link:../eslint-plugin
-      '@fellwork/foreman-tsconfig': link:../tsconfig
-      '@types/node': 17.0.23
+      '@fellwork/foreman-typescript': link:../typescript
       eslint: 8.12.0
-      typescript: 4.6.3
 
-  ../../conventions/eslint-patch:
+  ../../conventions/eslint-config:
     specifiers:
+      '@fellwork/prettier-config-foreman': workspace:*
       '@rushstack/eslint-patch': ^1.1.1
+      '@typescript-eslint/eslint-plugin': ^5.17.0
+      '@typescript-eslint/parser': ^5.17.0
       eslint: ^8.12.0
+      eslint-config-prettier: ^8.5.0
+      eslint-plugin-es: ^4.1.0
+      eslint-plugin-eslint-comments: ^3.2.0
+      eslint-plugin-filenames: ^1.3.2
+      eslint-plugin-html: ^6.2.0
+      eslint-plugin-import: ^2.25.4
+      eslint-plugin-jsonc: ^2.2.1
+      eslint-plugin-markdown: ^2.2.1
+      eslint-plugin-n: ^15.1.0
+      eslint-plugin-prettier: ^4.0.0
+      eslint-plugin-promise: ^6.0.0
+      eslint-plugin-sort-keys-fix: ^1.1.2
+      eslint-plugin-unicorn: ^42.0.0
+      eslint-plugin-yml: ^0.14.0
+      jsonc-eslint-parser: ^2.1.0
+      prettier: ^2.6.1
+      typescript: ^4.5.5
+      yaml-eslint-parser: ^0.5.0
     dependencies:
+      '@fellwork/prettier-config-foreman': link:../prettier-config
       '@rushstack/eslint-patch': 1.1.1
+      '@typescript-eslint/eslint-plugin': 5.17.0_689ff565753ecf7c3328c07fad067df5
+      '@typescript-eslint/parser': 5.17.0_eslint@8.12.0+typescript@4.6.3
+      eslint-config-prettier: 8.5.0_eslint@8.12.0
+      eslint-plugin-es: 4.1.0_eslint@8.12.0
+      eslint-plugin-eslint-comments: 3.2.0_eslint@8.12.0
+      eslint-plugin-filenames: 1.3.2_eslint@8.12.0
+      eslint-plugin-html: 6.2.0
+      eslint-plugin-import: 2.25.4_eslint@8.12.0
+      eslint-plugin-jsonc: 2.2.1_eslint@8.12.0
+      eslint-plugin-markdown: 2.2.1_eslint@8.12.0
+      eslint-plugin-n: 15.1.0_eslint@8.12.0
+      eslint-plugin-prettier: 4.0.0_f2c91d0f54113167d2bd9214a5ab5a36
+      eslint-plugin-promise: 6.0.0_eslint@8.12.0
+      eslint-plugin-sort-keys-fix: 1.1.2
+      eslint-plugin-unicorn: 42.0.0_eslint@8.12.0
+      eslint-plugin-yml: 0.14.0_eslint@8.12.0
+      jsonc-eslint-parser: 2.1.0
+      yaml-eslint-parser: 0.5.0
     devDependencies:
       eslint: 8.12.0
+      prettier: 2.6.2
+      typescript: 4.6.3
 
   ../../conventions/eslint-plugin:
     specifiers:
-      '@fellwork/foreman-eslint-patch': workspace:*
       '@fellwork/prettier-config-foreman': workspace:*
       '@typescript-eslint/eslint-plugin': ^5.17.0
       '@typescript-eslint/parser': ^5.17.0
@@ -55,7 +92,6 @@ importers:
       typescript: ^4.5.5
       yaml-eslint-parser: ^0.5.0
     dependencies:
-      '@fellwork/foreman-eslint-patch': link:../eslint-patch
       '@fellwork/prettier-config-foreman': link:../prettier-config
       '@typescript-eslint/eslint-plugin': 5.17.0_689ff565753ecf7c3328c07fad067df5
       '@typescript-eslint/parser': 5.17.0_eslint@8.12.0+typescript@4.6.3
@@ -82,24 +118,34 @@ importers:
       typescript: 4.6.3
 
   ../../conventions/prettier-config:
-    specifiers: {}
+    specifiers:
+      prettier: ^2.6.1
+    dependencies:
+      prettier: 2.6.2
 
   ../../conventions/rollup-config:
     specifiers:
       '@fellwork/eslint-plugin-foreman': workspace:*
-      '@fellwork/foreman-tsconfig': workspace:*
+      '@fellwork/foreman-typescript': workspace:*
       eslint: ^8.12.0
       tslib: ^2.3.1
       typescript: ^4.5.5
     devDependencies:
       '@fellwork/eslint-plugin-foreman': link:../eslint-plugin
-      '@fellwork/foreman-tsconfig': link:../tsconfig
+      '@fellwork/foreman-typescript': link:../typescript
       eslint: 8.12.0
       tslib: 2.3.1
       typescript: 4.6.3
 
-  ../../conventions/tsconfig:
-    specifiers: {}
+  ../../conventions/typescript:
+    specifiers:
+      '@types/node': ^17.0.23
+      tslib: ^2.3.1
+      typescript: ^4.5.5
+    dependencies:
+      '@types/node': 17.0.23
+      tslib: 2.3.1
+      typescript: 4.6.3
 
   ../../libraries/build:
     specifiers:
@@ -274,7 +320,6 @@ packages:
 
   /@types/node/17.0.23:
     resolution: {integrity: sha512-UxDxWn7dl97rKVeVS61vErvw086aCYhDLyvRQZ5Rk65rZKepaFdm53GeqXaKBuOhED4e9uWq34IC3TdSdJJ2Gw==}
-    dev: true
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
@@ -1822,7 +1867,6 @@ packages:
     resolution: {integrity: sha512-PkUpF+qoXTqhOeWL9fu7As8LXsIUZ1WYaJiY/a7McAQzxjk82OF0tibkFXVCDImZtWxbvojFjerkiLb0/q8mew==}
     engines: {node: '>=10.13.0'}
     hasBin: true
-    dev: true
 
   /punycode/2.1.1:
     resolution: {integrity: sha512-XRsRjdf+j5ml+y/6GKHPZbrF/8p2Yga0JPtdqTIY2Xe5ohJPD9saDJJLPvp9+NSBprVvevdXZybnj2cv8OEd0A==}
@@ -2065,7 +2109,6 @@ packages:
 
   /tslib/2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
-    dev: true
 
   /tsutils/3.21.0_typescript@4.6.3:
     resolution: {integrity: sha512-mHKK3iUXL+3UF6xL5k0PEhKRUBKPBCv/+RkEOpjRWxxx27KKRBmmA60A9pgOUvMi8GKhRMPEmjBRPzs2W7O1OA==}
@@ -2103,7 +2146,6 @@ packages:
     resolution: {integrity: sha512-yNIatDa5iaofVozS/uQJEl3JRWLKKGJKh6Yaiv0GLGSuhpFJe7P3SbHZ8/yjAHRQwKRoA6YZqlfjXWmVzoVSMw==}
     engines: {node: '>=4.2.0'}
     hasBin: true
-    dev: true
 
   /unbox-primitive/1.0.1:
     resolution: {integrity: sha512-tZU/3NqK3dA5gpE1KtyiJUrEB0lxnGkMFHptJ7q6ewdZ8s12QrODwNbhIJStmJkd1QDXa1NRA8aF2A1zk/Ypyw==}

@@ -21,7 +21,7 @@
   ],
   "devDependencies": {
     "@fellwork/eslint-plugin-foreman": "workspace:*",
-    "@fellwork/foreman-tsconfig": "workspace:*",
+    "@fellwork/foreman-typescript": "workspace:*",
     "eslint": "^8.12.0",
     "tslib": "^2.3.1",
     "typescript": "^4.5.5"

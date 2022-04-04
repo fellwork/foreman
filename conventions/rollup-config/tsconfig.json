@@ -1,11 +1,9 @@
 {
-  "extends": "./node_modules/@fellwork/foreman-tsconfig/tsconfig.json",
+  "extends": "./node_modules/@fellwork/foreman-typescript/tsconfig.json",
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "lib": ["esnext"],
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
+    "incremental": false,
+    "skipLibCheck": true,
     "types": ["node"]
-  }
+  },
+  "include": ["src/index.ts"]
 }

@@ -14,9 +14,16 @@
     "directory": "conventions/prettier-config"
   },
   "license": "MIT",
+  "files": [
+    "prettier.json",
+    "*.md"
+  ],
   "engines": {
     "node": ">=12.20.0",
     "pnpm": ">=6.32.4"
+  },
+  "dependencies": {
+    "prettier": "^2.6.1"
   },
   "publishConfig": {
     "access": "public"

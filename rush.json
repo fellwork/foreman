@@ -121,14 +121,14 @@
   "projects": [
     // conventions
     {
-      "packageName": "@fellwork/foreman-esbuild-plugin",
+      "packageName": "@fellwork/esbuild-plugin-foreman",
       "projectFolder": "conventions/esbuild-plugin",
       "reviewCategory": "conventions",
       "shouldPublish": true
     },
     {
-      "packageName": "@fellwork/foreman-eslint-patch",
-      "projectFolder": "conventions/eslint-patch",
+      "packageName": "@fellwork/eslint-config-foreman",
+      "projectFolder": "conventions/eslint-config",
       "reviewCategory": "conventions",
       "shouldPublish": true
     },
@@ -151,8 +151,8 @@
       "shouldPublish": true
     },
     {
-      "packageName": "@fellwork/foreman-tsconfig",
-      "projectFolder": "conventions/tsconfig",
+      "packageName": "@fellwork/foreman-typescript",
+      "projectFolder": "conventions/typescript",
       "reviewCategory": "conventions",
       "shouldPublish": true
     },

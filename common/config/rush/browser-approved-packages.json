@@ -23,6 +23,10 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "@fellwork/foreman-typescript",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "@fellwork/prettier-config-foreman",
       "allowedCategories": [ "conventions" ]
     },
