@@ -1,11 +1,12 @@
 {
   "extends": "./node_modules/@fellwork/foreman-typescript/tsconfig.json",
   "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
     "incremental": false,
-    "outDir": "lib",
     "skipLibCheck": true,
-    "lib": ["ESNext"],
+    "outDir": "lib",
     "types": ["node"]
   },
-  "include": ["src/*.ts"]
+  "include": ["**/*"]
 }

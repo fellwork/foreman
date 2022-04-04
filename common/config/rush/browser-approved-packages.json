@@ -3,6 +3,10 @@
   "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/approved-packages.schema.json",
   "packages": [
     {
+      "name": "@fellwork/eslint-config-foreman",
+      "allowedCategories": [ "conventions", "libraries" ]
+    },
+    {
       "name": "@fellwork/eslint-plugin-foreman",
       "allowedCategories": [ "conventions" ]
     },
@@ -19,15 +23,23 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "@fellwork/foreman-rollup-config",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "@fellwork/foreman-tsconfig",
       "allowedCategories": [ "conventions" ]
     },
     {
       "name": "@fellwork/foreman-typescript",
-      "allowedCategories": [ "conventions" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "@fellwork/prettier-config-foreman",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@rollup/plugin-commonjs",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -63,11 +75,23 @@
       "allowedCategories": [ "libraries" ]
     },
     {
+      "name": "esbuild",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "eslint",
       "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "eslint-config-prettier",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-define-config",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-gitignore",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -148,6 +172,22 @@
     },
     {
       "name": "requireindex",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "rimraf",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "rollup",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "rollup-plugin-dts",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "rollup-plugin-esbuild",
       "allowedCategories": [ "conventions" ]
     },
     {
