@@ -1,5 +1,3 @@
-require('@fellwork/foreman-eslint-patch');
-
 module.exports = {
   root: true,
   extends: ['./src/config/strict', './src/config/prettier'],

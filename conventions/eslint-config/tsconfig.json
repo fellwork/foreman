@@ -1,11 +1,16 @@
 {
   "extends": "./node_modules/@fellwork/foreman-typescript/tsconfig.json",
   "compilerOptions": {
-    "baseUrl": "./src",
     "module": "commonjs",
+    "baseUrl": "./",
     "types": ["node"],
     "target": "ESNext",
-    "lib": ["ESNext", "DOM", "DOM.Iterable"]
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "paths": {
+      "@/*": ["src/*"],
+      "@/shared/*": ["src/shared/*"],
+      "@/configs/*": ["src/configs/*"]
+    }
   },
   "include": ["./src/**/*"]
 }

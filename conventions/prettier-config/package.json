@@ -7,7 +7,7 @@
     "config"
   ],
   "author": "Shane McGuirt <10144278+srmcguirt@users.noreply.github.com>",
-  "main": "prettier.json",
+  "main": ".prettierrc.json",
   "repository": {
     "type": "git",
     "url": "https://github.com/fellwork/foreman.git",
@@ -15,7 +15,7 @@
   },
   "license": "MIT",
   "files": [
-    "prettier.json",
+    ".prettierrc.json",
     "*.md"
   ],
   "engines": {

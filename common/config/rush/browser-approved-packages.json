@@ -27,6 +27,10 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "@jest/types",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "@rollup/plugin-commonjs",
       "allowedCategories": [ "conventions" ]
     },
@@ -48,6 +52,18 @@
     },
     {
       "name": "@typescript-eslint/parser",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@typescript-eslint/typescript-estree",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@zerollup/ts-transform-paths",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "babel-jest",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -79,6 +95,10 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "eslint-plugin-compat",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "eslint-plugin-es",
       "allowedCategories": [ "conventions" ]
     },
@@ -100,6 +120,10 @@
     },
     {
       "name": "eslint-plugin-import",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "eslint-plugin-jest",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -131,7 +155,15 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "eslint-plugin-vue",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "eslint-plugin-yml",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "jest",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -171,12 +203,24 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "ts-jest",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "ts-node",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "tslib",
       "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "tsup",
       "allowedCategories": [ "conventions", "libraries" ]
+    },
+    {
+      "name": "type-fest",
+      "allowedCategories": [ "conventions" ]
     },
     {
       "name": "typedoc",

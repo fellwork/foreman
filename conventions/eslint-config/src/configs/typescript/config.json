@@ -1,0 +1,71 @@
+{
+  "extends": ["plugin:import/typescript", "plugin:@typescript-eslint/recommended"],
+  "parserOptions": {
+    "parser": "@typescript-eslint/parser"
+  },
+  "rules": {
+    "import/named": "off",
+
+    // TS
+    "@typescript-eslint/semi": ["error", "never"],
+    "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
+    "@typescript-eslint/member-delimiter-style": [
+      "error",
+      { "multiline": { "delimiter": "none" } }
+    ],
+    "@typescript-eslint/type-annotation-spacing": ["error", {}],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      { "prefer": "type-imports", "disallowTypeAnnotations": false }
+    ],
+    "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
+    "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
+    "@typescript-eslint/prefer-ts-expect-error": "error",
+
+    // JS Overrides
+    "indent": "off",
+    "no-use-before-define": "off",
+    "brace-style": "off",
+    "comma-dangle": "off",
+    "object-curly-spacing": "off",
+    "camelcase": "off",
+    "no-array-constructor": "off",
+    "no-unused-vars": "off",
+    "no-unused-expressions": "off",
+    "no-useless-constructor": "off",
+    "no-return-await": "off",
+
+    // Checked by Typescript
+    "getter-return": "off",
+    "no-dupe-args": "off",
+    "no-dupe-keys": "off",
+    "no-unreachable": "off",
+    "valid-typeof": "off",
+    "no-const-assign": "off",
+    "no-new-symbol": "off",
+    "no-this-before-super": "off",
+    "no-undef": "off",
+    "no-dupe-class-members": "off",
+    "no-redeclare": "off",
+    "import/no-extraneous-dependencies": "off",
+
+    // off
+    "@typescript-eslint/camelcase": "off",
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/explicit-member-accessibility": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-parameter-properties": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/no-namespace": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": { "extensions": [".js", ".jsx", ".mjs", ".ts", ".tsx", ".d.ts"] }
+    }
+  }
+}
