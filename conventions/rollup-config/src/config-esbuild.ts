@@ -1,4 +1,4 @@
-import { Plugin } from 'rollup';
+import type { Plugin } from 'rollup';
 import rollupEsbuild from 'rollup-plugin-esbuild';
 
 export interface EsbuildConfig {
@@ -12,7 +12,7 @@ const configureEsbuild = (config: EsbuildConfig): Plugin => {
     target: config.target,
     jsx: 'preserve',
     sourceMap: true,
-    minify: true,
+    minify: false,
     loaders: {
       '.json': 'json'
     }

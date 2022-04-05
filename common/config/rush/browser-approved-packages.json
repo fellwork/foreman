@@ -11,23 +11,11 @@
       "allowedCategories": [ "conventions" ]
     },
     {
-      "name": "@fellwork/foreman-eslint-patch",
-      "allowedCategories": [ "conventions" ]
-    },
-    {
       "name": "@fellwork/foreman-eslint-plugin",
       "allowedCategories": [ "conventions" ]
     },
     {
-      "name": "@fellwork/foreman-prettier-config",
-      "allowedCategories": [ "conventions" ]
-    },
-    {
       "name": "@fellwork/foreman-rollup-config",
-      "allowedCategories": [ "conventions" ]
-    },
-    {
-      "name": "@fellwork/foreman-tsconfig",
       "allowedCategories": [ "conventions" ]
     },
     {
@@ -43,19 +31,15 @@
       "allowedCategories": [ "conventions" ]
     },
     {
-      "name": "@rushstack/eslint-config",
-      "allowedCategories": [ "libraries" ]
+      "name": "@rollup/plugin-node-resolve",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
+      "name": "@rollup/pluginutils",
+      "allowedCategories": [ "conventions" ]
     },
     {
       "name": "@rushstack/eslint-patch",
-      "allowedCategories": [ "conventions", "libraries" ]
-    },
-    {
-      "name": "@rushstack/heft",
-      "allowedCategories": [ "conventions", "libraries" ]
-    },
-    {
-      "name": "@rushstack/heft-node-rig",
       "allowedCategories": [ "conventions", "libraries" ]
     },
     {
@@ -93,10 +77,6 @@
     {
       "name": "eslint-gitignore",
       "allowedCategories": [ "conventions" ]
-    },
-    {
-      "name": "eslint-patch-foreman",
-      "allowedCategories": [ "libraries" ]
     },
     {
       "name": "eslint-plugin-es",
@@ -163,14 +143,6 @@
       "allowedCategories": [ "conventions" ]
     },
     {
-      "name": "prettier-config",
-      "allowedCategories": [ "conventions" ]
-    },
-    {
-      "name": "prettier-config-foreman",
-      "allowedCategories": [ "conventions" ]
-    },
-    {
       "name": "requireindex",
       "allowedCategories": [ "conventions" ]
     },
@@ -195,12 +167,16 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "ts-essentials",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "tslib",
       "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "tsup",
-      "allowedCategories": [ "libraries" ]
+      "allowedCategories": [ "conventions", "libraries" ]
     },
     {
       "name": "typedoc",
@@ -208,7 +184,7 @@
     },
     {
       "name": "typescript",
-      "allowedCategories": [ "conventions", "libraries" ]
+      "allowedCategories": [ "conventions" ]
     },
     {
       "name": "yaml-eslint-parser",
