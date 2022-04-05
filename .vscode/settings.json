@@ -1,6 +1,6 @@
 {
   // Use the project's typescript version
-  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.tsdk": "./node_modules/typescript/lib",
   "markdownlint.ignore": ["**/CHANGELOG.md"],
   "eslint.validate": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
 
@@ -23,7 +23,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -76,6 +76,7 @@
     "pnpm",
     "requireindex",
     "rushstack",
+    "tsup",
     "typedefs"
   ],
   "explorerExclude.backup": null

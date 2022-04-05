@@ -1,11 +1,12 @@
 {
   "extends": "./node_modules/@fellwork/foreman-typescript/tsconfig.json",
   "compilerOptions": {
-    "incremental": false,
-    "outDir": "lib",
-    "skipLibCheck": true,
-    "lib": ["ESNext"],
+    "target": "ESNext",
+    "module": "ESNext",
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
+    "baseUrl": "./src",
+    "outDir": "./temp",
     "types": ["node"]
   },
-  "include": ["src/*.ts"]
+  "include": ["./src/**/*"]
 }

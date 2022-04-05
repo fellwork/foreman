@@ -1,8 +1,8 @@
 import { RollupOptions } from 'rollup';
-import { promisify } from 'util';
-import { existsSync as fileExists, readFileSync as fileRead } from 'fs';
-import { resolve, sep as DIRECTORY_SEPARATOR } from 'path';
-import { exec as execCallback } from 'child_process';
+import { promisify } from 'node:util';
+import { existsSync as fileExists, readFileSync as fileRead } from 'node:fs';
+import { resolve, sep as DIRECTORY_SEPARATOR } from 'node:path';
+import { exec as execCallback } from 'node:child_process';
 
 import rollupTypescriptDefinitions from 'rollup-plugin-dts';
 import configureRollupBuild from './rollup-build';
@@ -19,7 +19,7 @@ interface callback {
   (builds: RollupBuilds): Promise<RollupBuilds>;
 }
 
-export async function autoconfig(fn?: callback): Promise<RollupOptions[]> {
+export async function useRollup(fn?: callback): Promise<RollupOptions[]> {
   const pkgFile = resolve(process.cwd(), 'package.json');
   if (!fileExists(pkgFile))
     throw ReferenceError(

@@ -1,9 +1,30 @@
-import * as opts from './options';
+import './patch';
+import * as base from './base';
+import * as typescript from './typescript';
 
 export default {
-  extends: opts.extends,
-  ignorePatterns: opts.ignorePatterns,
-  parser: opts.parser,
-  plugins: opts.plugins,
-  overrides: opts.overrides
+  env: base.env,
+  extends: [
+    ...base.extends,
+    'plugin:import/typescript',
+    'plugin:@typescript-eslint/recommended',
+    'plugin:prettier/recommended'
+  ],
+  ignorePatterns: base.ignorePatterns,
+  plugins: [...base.plugins, 'prettier'],
+  overrides: [...base.overrides],
+  settings: { ...base.settings, ...typescript.settings },
+  rules: {
+    ...base.rules,
+    ...typescript.rules,
+    'prettier/prettier': [
+      'error',
+      {
+        semi: true,
+        singleQuote: true,
+        trailingComma: 'all',
+        printWidth: 100
+      }
+    ]
+  }
 };

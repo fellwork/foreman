@@ -1,6 +1,7 @@
 import { ModuleFormat, Plugin, RollupOptions } from 'rollup';
 import configureEsbuild from './config-esbuild';
 import commonjs from '@rollup/plugin-commonjs';
+import { nodeResolve } from '@rollup/plugin-node-resolve';
 
 export interface RollupBuildOptions {
   sourceFile: string;
@@ -31,6 +32,7 @@ const configureRollupBuild = (
     external: config.externalDependencies ?? [],
     plugins: config.pluginList ?? [
       commonjs(),
+      nodeResolve(),
       configureEsbuild({
         tsconfig: config.tsconfigFile,
         target: buildTarget
