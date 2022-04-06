@@ -18,29 +18,20 @@ let eslintFolder: string | undefined = undefined;
 // Probe for the ESLint >=8.0.0 layout:
 for (let currentModule = module; ; ) {
   if (!eslintrcBundlePath) {
-    // For ESLint >=8.0.0, all @eslint/eslintrc code is bundled at this path:
-    //   .../@eslint/eslintrc/dist/eslintrc.cjs
     try {
       const eslintrcFolder = path.dirname(
         require.resolve('@eslint/eslintrc/package.json', { paths: [currentModule.path] })
       );
 
-      // Make sure we actually resolved the module in our call path
-      // and not some other spurious dependency.
       if (path.join(eslintrcFolder, 'dist/eslintrc.cjs') === currentModule.filename) {
         eslintrcBundlePath = path.join(eslintrcFolder, 'dist/eslintrc.cjs');
       }
     } catch (ex: unknown) {
-      // Module resolution failures are expected, as we're walking
-      // up our require stack to look for eslint. All other errors
-      // are rethrown.
       if (!isModuleResolutionError(ex)) {
         throw ex;
       }
     }
   } else {
-    // Next look for a file in ESLint's folder
-    //   .../eslint/lib/cli-engine/cli-engine.js
     try {
       const eslintCandidateFolder = path.dirname(
         require.resolve('eslint/package.json', {
@@ -48,8 +39,6 @@ for (let currentModule = module; ; ) {
         })
       );
 
-      // Make sure we actually resolved the module in our call path
-      // and not some other spurious dependency.
       if (
         path.join(eslintCandidateFolder, 'lib/cli-engine/cli-engine.js') === currentModule.filename
       ) {
@@ -57,9 +46,6 @@ for (let currentModule = module; ; ) {
         break;
       }
     } catch (ex: unknown) {
-      // Module resolution failures are expected, as we're walking
-      // up our require stack to look for eslint. All other errors
-      // are rethrown.
       if (!isModuleResolutionError(ex)) {
         throw ex;
       }
@@ -76,8 +62,6 @@ if (!eslintFolder) {
   // Probe for the ESLint >=7.8.0 layout:
   for (let currentModule = module; ; ) {
     if (!configArrayFactoryPath) {
-      // For ESLint >=7.8.0, config-array-factory.js is at this path:
-      //   .../@eslint/eslintrc/lib/config-array-factory.js
       try {
         const eslintrcFolder = path.dirname(
           require.resolve('@eslint/eslintrc/package.json', {
@@ -90,16 +74,11 @@ if (!eslintFolder) {
           moduleResolverPath = path.join(eslintrcFolder, 'lib/shared/relative-module-resolver');
         }
       } catch (ex: unknown) {
-        // Module resolution failures are expected, as we're walking
-        // up our require stack to look for eslint. All other errors
-        // are rethrown.
         if (!isModuleResolutionError(ex)) {
           throw ex;
         }
       }
     } else {
-      // Next look for a file in ESLint's folder
-      //   .../eslint/lib/cli-engine/cli-engine.js
       try {
         const eslintCandidateFolder = path.dirname(
           require.resolve('eslint/package.json', {
@@ -114,9 +93,6 @@ if (!eslintFolder) {
           break;
         }
       } catch (ex: unknown) {
-        // Module resolution failures are expected, as we're walking
-        // up our require stack to look for eslint. All other errors
-        // are rethrown.
         if (!isModuleResolutionError(ex)) {
           throw ex;
         }

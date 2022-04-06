@@ -231,6 +231,10 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "unbuild",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "yaml-eslint-parser",
       "allowedCategories": [ "conventions" ]
     },

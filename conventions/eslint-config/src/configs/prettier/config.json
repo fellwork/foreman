@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/eslintrc",
+  "extends": "plugin:prettier/recommended",
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": [
+      "warn",
+      {
+        "singleQuote": true,
+        "semi": false,
+        "trailingComma": "all"
+      }
+    ]
+  }
+}

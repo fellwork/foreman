@@ -1,4 +1,4 @@
-import standard from './standard';
+import base from './base';
 import typescript from './typescript';
 
-export { standard, typescript };
+export { base, typescript };
