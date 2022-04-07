@@ -1,6 +1,3 @@
-import * as eslint from 'eslint';
-import path from 'path';
+import { ESLint, Linter, RuleTester, SourceCode } from 'eslint'
 
-const api: any = await import('eslint/lib/api');
-
-export default api;
+export { ESLint, Linter, RuleTester, SourceCode }

@@ -1,4 +1,4 @@
-export = [
+export default [
   '!.*/**/*',
   '!.*',
   '*.map',
@@ -25,5 +25,6 @@ export = [
   '.history',
   'packages-lock.json',
   'pnpm-lock.yaml',
-  'yarn.lock'
-];
+  'yarn.lock',
+  'tsconfig.json',
+]

@@ -1,20 +1,20 @@
-import { extensions } from './extensions';
+import { extensions } from './extensions'
 
 export const importSettings = {
   'import/extensions': extensions.js,
   'import/resolver': {
     node: {
-      extensions: extensions.js
-    }
+      extensions: extensions.js,
+    },
   },
   'import/core-modules': [],
   'import/ignore': ['\\.(coffee|scss|css|less|hbs|svg|json)$'],
-  'import/internal-regex': '^@types/'
-};
+  'import/internal-regex': '^@types/',
+}
 
 interface ImportRules {
-  [rule: string]: unknown;
-  'import/extensions': [string, string, Record<string, 'never'>];
+  [rule: string]: unknown
+  'import/extensions': [string, string, Record<string, 'never'>]
 }
 
 export const importRules: ImportRules = {
@@ -22,8 +22,8 @@ export const importRules: ImportRules = {
   'import/no-anonymous-default-export': [
     'error',
     {
-      allowCallExpression: false
-    }
+      allowCallExpression: false,
+    },
   ],
   'import/export': 'error',
   // 'import/no-extraneous-dependencies': [
@@ -65,12 +65,12 @@ export const importRules: ImportRules = {
     {
       js: 'never',
       mjs: 'never',
-      jsx: 'never'
-    }
+      jsx: 'never',
+    },
   ],
   'import/newline-after-import': 'warn',
   'import/no-webpack-loader-syntax': 'error',
   'import/no-self-import': 'error',
   'import/no-cycle': ['error', { maxDepth: Number.POSITIVE_INFINITY }],
-  'import/no-useless-path-segments': ['warn', { commonjs: true }]
-};
+  'import/no-useless-path-segments': ['warn', { commonjs: true }],
+}

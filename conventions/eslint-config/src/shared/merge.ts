@@ -1,4 +1,4 @@
-import { copy } from './copy';
+import { copy } from './copy'
 
 /**
  * Does a shallow merge of object `from` to object `to`.
@@ -17,24 +17,23 @@ export function merge<F extends object, T extends object, R extends F & T = F & 
   from: F,
   to: T
 ): R {
-  const mergedInto = copy(to) as R;
+  const mergedInto = copy(to) as R
   for (const key in from) {
-    const curKey = key as unknown as keyof R;
-    const hasKey = mergedInto.hasOwnProperty(key);
-    const fromVal = from[key];
+    const curKey = key as unknown as keyof R
+    const hasKey = mergedInto.hasOwnProperty(key)
+    const fromVal = from[key]
     if (Array.isArray(fromVal)) {
       if (!hasKey || !(mergedInto[curKey] instanceof Array))
-        mergedInto[curKey] = [] as unknown as R[typeof curKey];
-
-      (mergedInto[curKey] as unknown as Array<any>).push(...fromVal);
+        mergedInto[curKey] = [] as unknown as R[typeof curKey]
+      ;(mergedInto[curKey] as unknown as Array<unknown>).push(...fromVal)
     } else if (typeof fromVal === 'object') {
       if (!hasKey || !(typeof mergedInto[curKey] === 'object'))
-        mergedInto[curKey] = {} as unknown as R[typeof curKey];
+        mergedInto[curKey] = {} as unknown as R[typeof curKey]
 
-      Object.assign(mergedInto[curKey], fromVal);
+      Object.assign(mergedInto[curKey], fromVal)
     } else {
-      mergedInto[curKey] = fromVal as unknown as R[typeof curKey];
+      mergedInto[curKey] = fromVal as unknown as R[typeof curKey]
     }
   }
-  return mergedInto;
+  return mergedInto
 }

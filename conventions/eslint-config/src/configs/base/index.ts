@@ -1,4 +1,8 @@
-import { useBabelParserConfig } from '@/shared';
-import base from './config.json';
+import { useBabelParserConfig, merge } from '../../shared'
+import { default as baseConfig } from './config'
+import { overrides } from './overrides'
 
-export default useBabelParserConfig(base);
+const configured = useBabelParserConfig(baseConfig)
+const base = Object.freeze(merge(configured, { overrides }))
+
+export default base

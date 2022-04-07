@@ -1,12 +1,6 @@
 {
-  "extends": ["plugin:import/typescript", "plugin:@typescript-eslint/recommended"],
-  "parserOptions": {
-    "parser": "@typescript-eslint/parser"
-  },
   "rules": {
     "import/named": "off",
-
-    // TS
     "@typescript-eslint/semi": ["error", "never"],
     "@typescript-eslint/ban-ts-comment": ["error", { "ts-ignore": "allow-with-description" }],
     "@typescript-eslint/member-delimiter-style": [
@@ -21,8 +15,6 @@
     "@typescript-eslint/consistent-type-definitions": ["error", "interface"],
     "@typescript-eslint/consistent-indexed-object-style": ["error", "record"],
     "@typescript-eslint/prefer-ts-expect-error": "error",
-
-    // JS Overrides
     "indent": "off",
     "no-use-before-define": "off",
     "brace-style": "off",
@@ -34,8 +26,6 @@
     "no-unused-expressions": "off",
     "no-useless-constructor": "off",
     "no-return-await": "off",
-
-    // Checked by Typescript
     "getter-return": "off",
     "no-dupe-args": "off",
     "no-dupe-keys": "off",
@@ -48,8 +38,6 @@
     "no-dupe-class-members": "off",
     "no-redeclare": "off",
     "import/no-extraneous-dependencies": "off",
-
-    // off
     "@typescript-eslint/camelcase": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-member-accessibility": "off",
@@ -62,10 +50,5 @@
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/ban-types": "off",
     "@typescript-eslint/no-namespace": "off"
-  },
-  "settings": {
-    "import/resolver": {
-      "node": { "extensions": [".js", ".jsx", ".mjs", ".ts", ".tsx", ".d.ts"] }
-    }
   }
 }

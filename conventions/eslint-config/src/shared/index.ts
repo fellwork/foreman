@@ -1,3 +1,5 @@
-export { merge } from './merge';
-export { importRules, importSettings } from './import';
-export { ExtendOptions, useBabelParserConfig } from './use-babel';
+export * from './copy'
+export * from './extensions'
+export * from './import'
+export * from './merge'
+export * from './use-babel'

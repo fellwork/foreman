@@ -1,3 +1,7 @@
-import prettier from './config.json';
+import { merge } from '../../shared'
+import prettierRules from './prettier-rules.json'
+import { default as prettierConfig } from './config'
 
-export default Object.freeze(prettier);
+const prettier = Object.freeze(merge(prettierConfig, prettierRules))
+
+export default prettier

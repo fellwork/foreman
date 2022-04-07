@@ -1,5 +1,7 @@
-import { merge } from '@/shared';
-import base from '@/configs/base/config.json';
-import { overrides } from './overrides';
+import { merge } from '../../shared'
+import { default as baseConfig } from '../../configs/base'
+import { overrides } from './overrides'
 
-export default Object.freeze(merge(base, { overrides }));
+const typescript = Object.freeze(merge(baseConfig, { overrides }))
+
+export default typescript
