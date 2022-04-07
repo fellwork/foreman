@@ -1,6 +1,4 @@
-import { defineBuildConfig } from 'unbuild'
-
-export default defineBuildConfig({
+export default {
   clean: true,
   declaration: true,
   outDir: 'lib',
@@ -13,4 +11,4 @@ export default defineBuildConfig({
     },
   ],
   rollup: {},
-})
+}
