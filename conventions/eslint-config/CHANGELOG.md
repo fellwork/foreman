@@ -6,6 +6,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [0.0.1](https://github.com/fellwork/foreman/compare/v0.0.6...v0.0.1) (2022-04-07)
 
+### [0.0.1](https://github.com/fellwork/foreman/compare/v0.0.6...v0.0.1) (2022-04-07)
+
 ### [0.0.6](https://github.com/fellwork/foreman/compare/v0.0.4...v0.0.6) (2022-04-07)
 
 ### [0.0.5](https://github.com/fellwork/foreman/compare/v0.0.4...v0.0.5) (2022-04-07)
