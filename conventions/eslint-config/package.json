@@ -1,6 +1,6 @@
 {
   "name": "@fellwork/eslint-config-foreman",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "description": "Conventional ESLint typescript config for the foreman monorepo",
   "repository": {
@@ -28,7 +28,7 @@
     "stage": "git add .",
     "stash": "git stash",
     "status": "git status",
-    "release": "pnpm test && standard-version && pnpm push && pnpm publish",
+    "release": "pnpm test && standard-version && pnpm push && pnpm publish --no-git-checks",
     "test": "pnpm lint"
   },
   "dependencies": {
