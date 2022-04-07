@@ -1,6 +1,6 @@
 {
   "name": "@fellwork/eslint-config-foreman",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "description": "Conventional ESLint typescript config for the foreman monorepo",
   "repository": {
@@ -18,7 +18,7 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "commit": "git commit -a -m 'chore(repo): stage for release'",
+    "commit": "git commit -m 'chore(repo): stage for release'",
     "discard": "git reset --hard",
     "lint": "eslint --ext .ts,.js,.mjs,.cjs . --fix",
     "prepack": "unbuild",
