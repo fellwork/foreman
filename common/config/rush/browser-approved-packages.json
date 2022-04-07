@@ -199,6 +199,10 @@
       "allowedCategories": [ "conventions" ]
     },
     {
+      "name": "standard-version",
+      "allowedCategories": [ "conventions" ]
+    },
+    {
       "name": "ts-essentials",
       "allowedCategories": [ "conventions" ]
     },

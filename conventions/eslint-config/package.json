@@ -18,11 +18,11 @@
   ],
   "scripts": {
     "build": "unbuild",
-    "commit": "git commit -m \"chore(repo): stage for release\"",
+    "commit": "git commit -a -m \"chore(repo): stage for release\"",
     "discard": "git reset --hard",
     "lint": "eslint --ext .ts,.js,.mjs,.cjs . --fix",
     "prepack": "unbuild",
-    "prerelease": "pnpm stage && pnpm commit && git push",
+    "prerelease": "pnpm commit && git push",
     "pull": "git pull origin main",
     "push": "git push --follow-tags origin main",
     "stage": "git add .",
